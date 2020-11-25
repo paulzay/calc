@@ -18,7 +18,7 @@ export default function operate(numberOne, numberTwo, operation) {
       return 'Error';
     }
   } else if (operation === '%') {
-    result = a.times(0.01);
+    result = a.div(100);
   }
 
   return result;
