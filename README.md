@@ -14,6 +14,9 @@
 - Run `npm install` to install the necessary modules;
 - Run `npm start`, the page will automatically load on [localhost:3000](localhost:3000).
 
+## Screenshot
+![image](https://user-images.githubusercontent.com/29974825/100481037-0d6fe800-3104-11eb-97f7-43c11a65170f.png)
+
 
 ## Author
 
