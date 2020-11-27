@@ -1,10 +1,11 @@
-.App{
+.App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
+
 .result {
   height: 60px;
   background-color: #bbb;
@@ -15,12 +16,6 @@
 .result p {
   font-size: 40px;
   margin: 5px;
-
-}
-
-.calculator-body {
-  max-width: 400px;
-  margin: auto;
 }
 
 .button {
@@ -33,9 +28,11 @@ button {
   height: 60px;
   font-size: 30px;
 }
-.grp-1,.grp-2,.grp-3,.grp-4,.grp-5{
+
+.grp-1,
+.grp-2,
+.grp-3,
+.grp-4,
+.grp-5 {
   display: flex;
-}
-.grp-5 .zero{
-  width: 120px !important;
 }
