@@ -1,38 +1,43 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Button from './Button';
 
-export default function ButtonDisplay() {
+export default function ButtonDisplay({ clickHandler }) {
   return (
-    <>
+    <div>
       <div className="grp-1">
-        <Button name="AC" />
-        <Button name="+/-" />
-        <Button name="%" />
-        <Button name="/" />
+        <Button name="AC" clickHandler={clickHandler} />
+        <Button name="+/-" clickHandler={clickHandler} />
+        <Button name="%" clickHandler={clickHandler} />
+        <Button name="/" clickHandler={clickHandler} />
       </div>
       <div className="grp-2">
-        <Button name={7} />
-        <Button name={8} />
-        <Button name={9} />
-        <Button name="X" />
+        <Button name="7" clickHandler={clickHandler} />
+        <Button name="8" clickHandler={clickHandler} />
+        <Button name="9" clickHandler={clickHandler} />
+        <Button name="X" clickHandler={clickHandler} />
       </div>
       <div className="grp-3">
-        <Button name={4} />
-        <Button name={5} />
-        <Button name={6} />
-        <Button name="-" />
+        <Button name="4" clickHandler={clickHandler} />
+        <Button name="5" clickHandler={clickHandler} />
+        <Button name="6" clickHandler={clickHandler} />
+        <Button name="-" clickHandler={clickHandler} />
       </div>
       <div className="grp-4">
-        <Button name={1} />
-        <Button name={2} />
-        <Button name={2} />
-        <Button name="+" />
+        <Button name="1" clickHandler={clickHandler} />
+        <Button name="2" clickHandler={clickHandler} />
+        <Button name="3" clickHandler={clickHandler} />
+        <Button name="+" clickHandler={clickHandler} />
       </div>
       <div className="grp-5">
-        <Button name={0} />
-        <Button name="." />
-        <Button name="=" />
+        <Button name="0" clickHandler={clickHandler} />
+        <Button name="." clickHandler={clickHandler} />
+        <Button name="=" clickHandler={clickHandler} />
       </div>
-    </>
+    </div>
   );
 }
+
+ButtonDisplay.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
