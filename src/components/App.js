@@ -1,16 +1,32 @@
 import '../App.css';
+import { Component } from 'react';
 import ButtonDisplay from './ButtonDisplay';
 import Display from './Display';
-// eslint-disable-next-line no-unused-vars
 import calculate from '../logic/calculate';
 
-function App() {
-  return (
-    <>
-      <Display />
-      <ButtonDisplay />
-    </>
-  );
-}
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-export default App;
+  handleClick(buttonName) {
+    const calculator = calculate(this.state, buttonName);
+    this.setState(calculator);
+  }
+
+  render() {
+    const { total, next, operation } = this.state;
+    return (
+      <div className="App">
+        <Display operation={operation} next={next || '0'} total={total || '0'} />
+        <ButtonDisplay clickHandler={this.handleClick} />
+      </div>
+    );
+  }
+}
