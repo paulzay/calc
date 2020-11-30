@@ -2,7 +2,10 @@ import React from 'react';
 
 function Quote() {
   return (
-    <h1>Math is fun</h1>
+    <div>
+      <h1 className="texts">Math is fun</h1>
+    </div>
+
   );
 }
 

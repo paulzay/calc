@@ -1,9 +1,5 @@
 import React from 'react';
 
-const Home = () => (
-  <div className="jumbotron">
-    <h1>Math Magicians</h1>
-  </div>
-);
+const Home = () => <h1 className="texts">Math Magicians</h1>;
 
 export default Home;
